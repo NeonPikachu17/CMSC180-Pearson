@@ -14,7 +14,7 @@ int** createMatrix(int n){
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++) {
-            matrix[i][j] = (rand() % 10) + 1;
+            matrix[i][j] = rand() + 1;
         }
     }
 
@@ -165,7 +165,7 @@ int main(int argc, char* argv[]){
     t = clock();
 
     // Create a vector which will contain all of the answers
-    float* r = pearson_cor(matrix, vector, 3);
+    float* r = pearson_cor(matrix, vector, n);
 
     t = clock() - t;
 
